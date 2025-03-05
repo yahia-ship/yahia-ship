@@ -1,0 +1,47 @@
+print ("welcome user")
+while True:
+    procesing = input ("what user whant enter '1' to calculator or '2' to exit: ")
+    if procesing == '2':
+        print ("good bye")
+        break
+    elif procesing == '1':
+        num01 = input ("enter first number from 1 to 9: ")
+        procesing2 = input ("enter '+' to Addition or '-' to Subtraction or '/' to Division or '*' to Multiplication or '**' to Exponentiation: ")
+        num02 = input ("enter second number from 1 to 9: ")
+        try:
+            num01 = float(num01)
+            num02 = float(num02)
+        except ValueError:
+            print("Error: Please enter valid numbers!")
+            continue
+        if procesing2 == '+':
+            result =num01 + num02
+            print("your result is: " + str(result))
+        elif procesing2 == '-':
+            result = num01 + num02
+            print("your result is: " + str(result))
+        elif procesing2 == '/':
+            if num02 == 0:
+                print("please dont enter num 0 for division!")
+            else:
+                result = num01 / num02
+                print ("your result is: " + str(result))
+        elif procesing2 == '*':
+            result = num01 * num02
+            print("your result is: " + str(result))
+        elif procesing2  == '**':
+            result = num01 ** num02
+            print("your result is: " + str(result))
+        else:
+            print("eror: choise not find!")
+        user_choise = input("you want to continue: yes/no: ").lower()
+        if user_choise == 'yes':
+            continue
+        elif user_choise == 'no':
+            print("good bye")
+            break
+        else:
+            print("eror: choise not find!")
+    else:
+        print("eror: choise not find!")
+        continue  
